@@ -1,0 +1,305 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0; 
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.cajas{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-top: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+#crece{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(235, 47, 47);
+    margin: 50px;
+    display: flex;
+    color: white;
+    font-size: 32px;    
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#crece:hover{
+    animation-name: crece;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: alternate;
+    z-index: -1;
+}
+
+@keyframes crece{
+    0%{transform: scale(1);
+
+    }
+    
+    100%{
+        transform: scale(2.5);
+    }
+}
+
+#late{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(28, 138, 127);
+    margin: 50px;
+    display: flex;
+    color: white;
+    font-size: 32px;    
+    justify-content: center;
+    align-items: center;
+}
+
+#late:hover{
+    animation-name: late;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes late{
+    0%{transform: scale(1.1);
+
+    }
+    100%{
+        transform: scale(0.9);
+    }
+}
+
+#gira_in{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(207, 188, 15);
+    margin: 50px;
+    display: flex;
+    color: white;
+    font-size: 32px;    
+    justify-content: center;
+    align-items: center;
+    animation-timing-function: linear;
+    position: relative;
+    
+}
+
+.gira:hover #gira_in{
+    animation-name: gira;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    
+}
+
+@keyframes gira{
+    0%{transform: rotate(0)
+
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
+
+#gira_out{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(241, 233, 154);
+    margin: 50px;
+    display: flex;
+    top:0;
+    left:0;
+    position: absolute;   
+
+}
+
+.gira{
+    position: relative;
+}
+
+
+#gira_texto{
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    margin: 50px;
+    display: flex;
+    color: white;
+    font-size: 32px;    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top:0;
+    left:0;
+    position: absolute; 
+}
+
+
+#sombra{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(14, 202, 183);
+    margin: 50px;
+    display: flex;
+    color: white;
+    font-size: 32px;    
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@keyframes sombra{
+    0%{filter: drop-shadow(0px 0px 0px rgb(14, 202, 183))
+
+    }
+    100%{
+        filter: drop-shadow(0px 0px 50px rgb(14, 202, 183))
+    }
+}
+
+#sombra:hover{
+    animation-name: sombra;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: alternate;
+}
+
+#bota{
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+    margin: 50px;
+    display: flex;
+    color: white;
+    font-size: 32px;    
+    justify-content: center;
+    align-items: center;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes bota{
+    0%{transform: translatey(-40px)
+
+    }
+
+    20%{transform: translatey(0px)
+
+    }
+
+    40%{transform: translatey(-30px)
+
+    }
+    60%{
+        transform: translatey(-10px)
+    }
+
+    80%{transform: translatey(-30px)
+
+    }
+
+    90%{transform: translatey(0px)
+
+    }
+    100%{
+        transform: translatey(-10px)
+    }
+}
+
+#bota:hover{
+    animation-name: bota;
+    animation-duration: 1s;
+    animation-play-state: running;
+    
+}
+
+#mueve_in{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(165, 13, 43);
+    margin: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    font-size: 32px;    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+@keyframes mueve{
+    0%{transform: translatex(0)
+
+    }
+
+    20%{
+        transform: translatex(-40px)
+    }
+    40%{
+        transform: translatex(-20px)
+    }
+
+    60%{
+        transform: translatex(20px)
+    }
+
+    80%{
+        transform: translatex(40px)
+    }
+
+    100%{
+        transform: translatex(0px)
+    }
+}
+
+.mueve:hover #mueve_in{
+    animation-name: mueve;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+    animation-play-state: running;
+    animation-timing-function: linear;
+}
+
+
+#mueve_out{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(173, 76, 96);
+    margin: 50px;
+    display: flex;
+    top:0;
+    left:0;
+    position: absolute;   
+}
+
+.mueve{
+    position: relative;
+}
+
+#mueve_texto{
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    margin: 50px;
+    display: flex;
+    color: white;
+    font-size: 32px;    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top:0;
+    left:0;
+    position: absolute; 
+}
+
